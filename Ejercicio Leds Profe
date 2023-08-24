@@ -1,0 +1,206 @@
+from machine import Pin
+import utime
+led1 = Pin(13, Pin.OUT)
+led2 = Pin(12, Pin.OUT)
+led3 = Pin(14, Pin.OUT)
+led4 = Pin(27, Pin.OUT)
+led5 = Pin(26, Pin.OUT)
+led6 = Pin(25, Pin.OUT)
+led7 = Pin(33, Pin.OUT)
+led8 = Pin(32, Pin.OUT)
+todos = [led1,led2,led3,led4,led5,led6,led7,led8]
+parpadeos = 1
+pausa = 0.15
+def parpadear():
+  while true:
+    led1.value(0)
+    led2.value(0)
+    led3.value(0)
+    led4.value(0)
+    led5.value(0)
+    led6.value(0)
+    led7.value(0)
+    led8.value(0)
+    utime.sleep(pausa)
+    led1.value(1)
+    led2.value(1)
+    led3.value(1)
+    led4.value(1)
+    led5.value(1)
+    led6.value(1)
+    led7.value(1)
+    led8.value(1)
+    utime.sleep(pausa)
+def secuencial1D():
+
+
+  led1.value(1)
+  utime.sleep(pausa)
+  led1.value
+  utime.sleep(pausa)
+
+  led2.value(1)
+  utime.sleep(pausa)
+  led2.value
+  utime.sleep(pausa)
+
+  led3.value(1)
+  utime.sleep(pausa)
+  led3.value
+  utime.sleep(pausa)
+
+  led4.value(1)
+  utime.sleep(pausa)
+  led4.value
+  utime.sleep(pausa)
+
+  led5.value(1)
+  utime.sleep(pausa)
+  led5.value
+  utime.sleep(pausa)
+
+  led6.value(1)
+  utime.sleep(pausa)
+  led6.value
+  utime.sleep(pausa)
+
+  led7.value(1)
+  utime.sleep(pausa)
+  led7.value
+  utime.sleep(pausa)
+
+  led8.value(1)
+  utime.sleep(pausa)
+  led8.value
+  utime.sleep(pausa)
+def secuencial1I ():
+  led8.value(1)
+  utime.sleep(pausa)
+  led8.value
+  utime.sleep(pausa)
+
+  led7.value(1)
+  utime.sleep(pausa)
+  led7.value
+  utime.sleep(pausa)
+
+  led6.value(1)
+  utime.sleep(pausa)
+  led6.value
+  utime.sleep(pausa)
+
+  led5.value(1)
+  utime.sleep(pausa)
+  led5.value
+  utime.sleep(pausa)
+
+  led4.value(1)
+  utime.sleep(pausa)
+  led4.value
+  utime.sleep(pausa)
+
+
+  led3.value(1)
+  utime.sleep(pausa)
+  led3.value
+  utime.sleep(pausa)
+
+  led2.value(1)
+  utime.sleep(pausa)
+  led2.value
+  utime.sleep(pausa)
+
+  led1.value(1)
+  utime.sleep(pausa)
+  led1.value
+  utime.sleep(pausa)
+def secuencia2 (a,b,c,d,e,f,g,h):
+  led1.value(a)
+  led2.value(b)
+  led3.value(c)
+  led4.value(d)
+  led5.value(e)
+  led6.value(f)
+  led7.value(g)
+  led8.value(h)
+  utime.sleep(pausa)
+def secuencial2I ():
+ secuencia2(0,0,0,0,0,0,0,1)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,1,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,1,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,1,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,1,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,1,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,1,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(1,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+def secuencial2D ():
+ secuencia2(1,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,1,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,1,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,1,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,1,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,1,0,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,1,0)
+ secuencia2(0,0,0,0,0,0,0,0)
+ secuencia2(0,0,0,0,0,0,0,1)
+ secuencia2(0,0,0,0,0,0,0,0)
+def secuencial3I ():
+  for i in todos :
+    i.value(1)
+    utime.sleep(pausa)
+    i.value(0)
+    utime.sleep(pausa)
+def secuencial 3D():
+  for i in reserved (todos):
+    i.value(1)
+    utime.sleep(pausa)
+    i.value(0)
+    utime.sleep(pausa)      
+# secuencial1D
+# secuencial1I
+# secuencial2I
+# secuencial2D
+# secuencial3D
+# secuencial3I
+
+def secuencial4D():
+    for elemento in todos:
+    for j in range (parpadeos*2):
+      elemento.value(not elemento.value())
+      utime.sleep(pausa)
+
+def secuencial4I():
+  for elemento in reversed(todos):
+    for j in range (parpadeos*2):
+      elemento.value(not elemento.value())
+      utime.sleep(pausa)
+
+
+
+
+while True:
+  parpadear()
+  secuencial1D()
+  secuencial1I()
+  secuencia2()
+  secuencial2I()
+  secuencial2D()
+  secuencial3I()
+  secuencial3D()
+  secuencial4D()
+  secuencial4I()
+  
